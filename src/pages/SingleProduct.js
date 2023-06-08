@@ -10,7 +10,7 @@ export function SingleProduct() {
     <section className='section product'>
       <img src={image} alt={name}/>
       <h5>{name}</h5>
-      <Link to={'/products'}>Back to products</Link>
+      <Link to={'/products'} className='btn'>Back to products</Link>
     </section>
   )
   
