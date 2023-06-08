@@ -7,6 +7,7 @@ import { Products } from './pages/Products';
 import { Error } from './pages/Error';
 import { SharedLayout } from './pages/SharedLayout';
 import { SingleProduct } from './pages/SingleProduct';
+import { ProtectedRoute } from './pages/ProtectedRoute';
 
 import  Dashboard  from './pages/Dashboard'
 import Login from './pages/Login'
@@ -21,7 +22,11 @@ export default function App() {
           <Route path='/about' element={<About/>}/>
           <Route path='/products' element={<Products/>}/>
           <Route path='/products/:productId' element={<SingleProduct/>}/>
-          <Route path='/dashboard' element={<Dashboard user={user}/>}/>
+          <Route path='/dashboard' element={
+            <ProtectedRoute user={user}>
+              <Dashboard user={user}/>
+            </ProtectedRoute>
+          }/>
           <Route path='/login' element={<Login setUser={setUser}/>}/>
         </Route>
 
