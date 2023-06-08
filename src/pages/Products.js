@@ -3,8 +3,7 @@ import products from "../data";
 
 export  function Products() {
   return(
-    <section className='section'>
-      <h2>Products</h2>
+    <>
       <div className="products">
         {products.map(product => {
           return(
@@ -16,6 +15,6 @@ export  function Products() {
         })}
       </div>
       <Link to='/' className="btn">Back to Home</Link>
-    </section>
+    </>
   )
 }
