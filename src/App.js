@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 
 import { About } from './pages/About'
@@ -16,7 +16,7 @@ import Login from './pages/Login'
 export default function App() {
   const [user, setUser] = useState(null)
   return (
-    <Router>
+    
       <Routes>
         <Route path='/' element={<SharedLayout/>}>
           <Route index element={<Home/>}/>
@@ -38,6 +38,6 @@ export default function App() {
 
         <Route path='*' element={<Error/>}/>
       </Routes>
-    </Router>
+    
   );
 }
